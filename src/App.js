@@ -123,37 +123,47 @@ return (
                     <div className="col-md-4 d-flex flex-column justify-content-between">
                         <nav className="bg-white shadow-sm rounded-3 p-3 text-center">
                             <h5 className="text-indigo-700 fw-semibold mb-3">Controls</h5>
-                            <button id="process" className="btn btn-outline-primary">Preprocess</button>
-                            <button id="process_play" className="btn btn-outline-primary">Proc & Play</button>
-                            <br />
-                            <button id="play" className="btn btn-success">Play</button>
-                            <button id="stop" className="btn btn-danger">Stop</button>
+                            <div className="d-grid gap-2">
+                                <button id="process" className="btn btn-outline-primary">Preprocess</button>
+                                <button id="process_play" className="btn btn-outline-primary">Proc & Play</button>
+                                <button id="play" className="btn btn-success">Play</button>
+                                <button id="stop" className="btn btn-danger">Stop</button>
+                            </div>
                         </nav>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-8" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
-                        <div id="editor" />
-                        <div id="output" />
+                <div className="row mt-5 g-4">
+                    <div className="col-md-8">
+                        <h5 className="text-indigo-700 fw-semibold mb-3">Pattern Editor</h5>
+                        <div id="editor" className="border border-gray-200 rounded-2 p-2 mb-3" />
+                        <div id="output" className="border border-gray-100 rounded-2 p-2 bg-gray-50" />
                     </div>
                     <div className="col-md-4">
-                        <div className="form-check">
-                            <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onChange={ProcAndPlay} defaultChecked />
-                            <label className="form-check-label" htmlFor="flexRadioDefault1">
-                                p1: ON
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onChange={ProcAndPlay} />
-                            <label className="form-check-label" htmlFor="flexRadioDefault2">
-                                p1: HUSH
-                            </label>
+                        <div className="bg-white shadow-sm rounded-3 p-3">
+                            <h5 className="text-indigo-700 fw-semibold mb-3">Processing Options</h5>
+
+                            <div className="form-check mb-2">
+                                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onChange={ProcAndPlay} defaultChecked />
+                                <label className="form-check-label" htmlFor="flexRadioDefault1">
+                                    p1: ON
+                                </label>
+                            </div>
+                            <div className="form-check">
+                                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onChange={ProcAndPlay} />
+                                <label className="form-check-label" htmlFor="flexRadioDefault2">
+                                    p1: HUSH
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <canvas id="roll"></canvas>
         </main >
+
+        <footer className="text-center text-muted py-4 border-top mt-5">
+            <small>Strudel Demo by Chehansa</small>
+        </footer>
     </div >
 );
 
