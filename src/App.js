@@ -33,10 +33,8 @@ export function SetupButtons() {
     )
 }
 
-
-
 export function ProcAndPlay() {
-    if (globalEditor != null && globalEditor.repl.state.started == true) {
+    if (globalEditor != null && globalEditor.repl.state.started === true) {
         console.log(globalEditor)
         Proc()
         globalEditor.evaluate();
@@ -63,15 +61,15 @@ export function ProcessText(match, ...args) {
 
 export default function StrudelDemo() {
 
-const hasRun = useRef(false);
+    const hasRun = useRef(false);
 
-useEffect(() => {
+    useEffect(() => {
 
-    if (!hasRun.current) {
-        document.addEventListener("d3Data", handleD3Data);
-        console_monkey_patch();
-        hasRun.current = true;
-        //Code copied from example: https://codeberg.org/uzu/strudel/src/branch/main/examples/codemirror-repl
+        if (!hasRun.current) {
+            document.addEventListener("d3Data", handleD3Data);
+            console_monkey_patch();
+            hasRun.current = true;
+            //Code copied from example: https://codeberg.org/uzu/strudel/src/branch/main/examples/codemirror-repl
             //init canvas
             const canvas = document.getElementById('roll');
             canvas.width = canvas.width * 2;
@@ -97,34 +95,39 @@ useEffect(() => {
                     await Promise.all([loadModules, registerSynthSounds(), registerSoundfonts()]);
                 },
             });
-            
-        document.getElementById('proc').value = stranger_tune
-        SetupButtons()
-        Proc()
-    }
 
-}, []);
+            document.getElementById('proc').value = stranger_tune
+            SetupButtons()
+            Proc()
+        }
+
+    }, []);
 
 
 return (
-    <div>
-        <h2>Strudel Demo</h2>
+    <div className="min-h-screen bg-gray-50 text-gray-800">
+        <header className="bg-indigo-600 py-4 shadow">
+            <div className="container-fluid text-center">
+                <h2>Strudel Demo</h2>
+            </div>
+        </header>
+
         <main>
-
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-md-8" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
-                        <label htmlFor="exampleFormControlTextarea1" className="form-label">Text to preprocess:</label>
-                        <textarea className="form-control" rows="15" id="proc" ></textarea>
+            <div className="container-fluid my-5">
+                <div className="row g-4">
+                    <div className="col-md-8">
+                        <label htmlFor="exampleFormControlTextarea1" className="form-label fw-semibold text-indigo-700">Text to preprocess:</label>
+                        <textarea className="form-control border border-gray-300 rounded-2" rows="15" id="proc" ></textarea>
                     </div>
-                    <div className="col-md-4">
 
-                        <nav>
+                    <div className="col-md-4 d-flex flex-column justify-content-between">
+                        <nav className="bg-white shadow-sm rounded-3 p-3 text-center">
+                            <h5 className="text-indigo-700 fw-semibold mb-3">Controls</h5>
                             <button id="process" className="btn btn-outline-primary">Preprocess</button>
                             <button id="process_play" className="btn btn-outline-primary">Proc & Play</button>
                             <br />
-                            <button id="play" className="btn btn-outline-primary">Play</button>
-                            <button id="stop" className="btn btn-outline-primary">Stop</button>
+                            <button id="play" className="btn btn-success">Play</button>
+                            <button id="stop" className="btn btn-danger">Stop</button>
                         </nav>
                     </div>
                 </div>
@@ -153,6 +156,5 @@ return (
         </main >
     </div >
 );
-
 
 }
