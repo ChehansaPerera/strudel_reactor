@@ -1,4 +1,4 @@
-export default function ControlButtons({
+function ControlButtons({
     onPlay,
     onStop,
     onProcess,
@@ -20,3 +20,5 @@ export default function ControlButtons({
         </div>
     );
 }
+
+export default ControlButtons;

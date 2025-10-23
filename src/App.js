@@ -9,7 +9,8 @@ import { getAudioContext, webaudioOutput, registerSynthSounds } from '@strudel/w
 import { registerSoundfonts } from '@strudel/soundfonts';
 import { stranger_tune } from './tunes';
 import console_monkey_patch, { getD3Data } from './console-monkey-patch';
-import  ControlButtons  from './components/ControlButtons'
+import ControlButtons from './components/ControlButtons'
+import OptionButtons from './components/OptionButtons'
 
 let globalEditor = null;
 
@@ -120,19 +121,6 @@ return (
                         <label htmlFor="exampleFormControlTextarea1" className="form-label fw-semibold text-indigo-700">Text to preprocess:</label>
                         <textarea className="form-control border border-gray-300 rounded-2" rows="15" id="proc" ></textarea>
                     </div>
-
-                    {/*<div className="col-md-4 d-flex flex-column justify-content-between">*/}
-                    {/*    <nav className="bg-white shadow-sm rounded-3 p-3 text-center">*/}
-                    {/*        <h5 className="text-indigo-700 fw-semibold mb-3">Controls</h5>*/}
-                    {/*        */}{/*<div className="d-grid gap-2">*/}
-                    {/*        */}{/*    <button id="process" className="btn btn-outline-primary">Preprocess</button>*/}
-                    {/*        */}{/*    <button id="process_play" className="btn btn-outline-primary">Proc & Play</button>*/}
-                    {/*        */}{/*    <button id="play" className="btn btn-success">Play</button>*/}
-                    {/*        */}{/*    <button id="stop" className="btn btn-danger">Stop</button>*/}
-                    {/*        */}{/*</div>*/}
-                    {/*    </nav>*/}
-                    {/*</div>*/}
-
                     <ControlButtons></ControlButtons>
                 </div>
                 <div className="row mt-5 g-4">
@@ -141,24 +129,7 @@ return (
                         <div id="editor" className="border border-gray-200 rounded-2 p-2 mb-3" />
                         <div id="output" className="border border-gray-100 rounded-2 p-2 bg-gray-50" />
                     </div>
-                    <div className="col-md-4">
-                        <div className="bg-white shadow-sm rounded-3 p-3">
-                            <h5 className="text-indigo-700 fw-semibold mb-3">Processing Options</h5>
-
-                            <div className="form-check mb-2">
-                                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onChange={ProcAndPlay} defaultChecked />
-                                <label className="form-check-label" htmlFor="flexRadioDefault1">
-                                    p1: ON
-                                </label>
-                            </div>
-                            <div className="form-check">
-                                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onChange={ProcAndPlay} />
-                                <label className="form-check-label" htmlFor="flexRadioDefault2">
-                                    p1: HUSH
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+                    <OptionButtons></OptionButtons>
                 </div>
             </div>
             <canvas id="roll"></canvas>
