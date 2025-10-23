@@ -9,6 +9,7 @@ import { getAudioContext, webaudioOutput, registerSynthSounds } from '@strudel/w
 import { registerSoundfonts } from '@strudel/soundfonts';
 import { stranger_tune } from './tunes';
 import console_monkey_patch, { getD3Data } from './console-monkey-patch';
+import  ControlButtons  from './components/ControlButtons'
 
 let globalEditor = null;
 
@@ -120,17 +121,19 @@ return (
                         <textarea className="form-control border border-gray-300 rounded-2" rows="15" id="proc" ></textarea>
                     </div>
 
-                    <div className="col-md-4 d-flex flex-column justify-content-between">
-                        <nav className="bg-white shadow-sm rounded-3 p-3 text-center">
-                            <h5 className="text-indigo-700 fw-semibold mb-3">Controls</h5>
-                            <div className="d-grid gap-2">
-                                <button id="process" className="btn btn-outline-primary">Preprocess</button>
-                                <button id="process_play" className="btn btn-outline-primary">Proc & Play</button>
-                                <button id="play" className="btn btn-success">Play</button>
-                                <button id="stop" className="btn btn-danger">Stop</button>
-                            </div>
-                        </nav>
-                    </div>
+                    {/*<div className="col-md-4 d-flex flex-column justify-content-between">*/}
+                    {/*    <nav className="bg-white shadow-sm rounded-3 p-3 text-center">*/}
+                    {/*        <h5 className="text-indigo-700 fw-semibold mb-3">Controls</h5>*/}
+                    {/*        */}{/*<div className="d-grid gap-2">*/}
+                    {/*        */}{/*    <button id="process" className="btn btn-outline-primary">Preprocess</button>*/}
+                    {/*        */}{/*    <button id="process_play" className="btn btn-outline-primary">Proc & Play</button>*/}
+                    {/*        */}{/*    <button id="play" className="btn btn-success">Play</button>*/}
+                    {/*        */}{/*    <button id="stop" className="btn btn-danger">Stop</button>*/}
+                    {/*        */}{/*</div>*/}
+                    {/*    </nav>*/}
+                    {/*</div>*/}
+
+                    <ControlButtons></ControlButtons>
                 </div>
                 <div className="row mt-5 g-4">
                     <div className="col-md-8">
