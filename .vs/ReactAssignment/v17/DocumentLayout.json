@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\optionbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\optionbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\texteditor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\texteditor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\controlbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\controlbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,20 +50,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TextEditor.js",
+              "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\TextEditor.js",
+              "RelativeDocumentMoniker": "src\\components\\TextEditor.js",
+              "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\TextEditor.js",
+              "RelativeToolTip": "src\\components\\TextEditor.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-23T13:09:58.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "OptionButtons.js",
+              "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\OptionButtons.js",
+              "RelativeDocumentMoniker": "src\\components\\OptionButtons.js",
+              "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\OptionButtons.js",
+              "RelativeToolTip": "src\\components\\OptionButtons.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-23T12:22:41.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ControlButtons.js",
               "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\ControlButtons.js",
               "RelativeDocumentMoniker": "src\\components\\ControlButtons.js",
               "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\ControlButtons.js",
               "RelativeToolTip": "src\\components\\ControlButtons.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-10-23T10:34:31.587Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "reportWebVitals.js",
               "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\reportWebVitals.js",
               "RelativeDocumentMoniker": "src\\reportWebVitals.js",
@@ -63,12 +97,11 @@
               "RelativeToolTip": "src\\reportWebVitals.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-23T09:50:09.761Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T09:50:09.761Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "setupTests.js",
               "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\setupTests.js",
               "RelativeDocumentMoniker": "src\\setupTests.js",
@@ -76,8 +109,7 @@
               "RelativeToolTip": "src\\setupTests.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-23T09:50:07.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T09:50:07.649Z"
             },
             {
               "$type": "Document",
@@ -87,7 +119,7 @@
               "RelativeDocumentMoniker": "src\\App.js",
               "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\App.js",
               "RelativeToolTip": "src\\App.js",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAkwIYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAkwIEAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-10-23T06:30:23.446Z",
               "EditorCaption": ""

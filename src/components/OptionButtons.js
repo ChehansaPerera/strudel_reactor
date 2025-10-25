@@ -10,13 +10,13 @@ function OptionButtons({
                 <h5 className="text-indigo-700 fw-semibold mb-3">Processing Options</h5>
 
                 <div className="form-check mb-2">
-                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onChange={ProcAndPlay} defaultChecked />
+                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked={option === "on"} onChange={() => { setOption("on"); ProcAndPlay(); }} defaultChecked />
                     <label className="form-check-label" htmlFor="flexRadioDefault1">
                         p1: ON
                     </label>
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onChange={ProcAndPlay} />
+                    <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked={option === "hush"} onChange={() => { setOption("hush"); ProcAndPlay(); }} />
                     <label className="form-check-label" htmlFor="flexRadioDefault2">
                         p1: HUSH
                     </label>
