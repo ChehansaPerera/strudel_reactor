@@ -10,11 +10,11 @@ function ControlButtons({
         <div className="col-md-4 d-flex flex-column justify-content-between">
             <nav className="bg-white shadow-sm rounded-3 p-3 text-center">
                 <h5 className="text-indigo-700 fw-semibold mb-3">Controls</h5>
-                <div className="d-grid gap-2"> 
-                    <button id="process" className="btn btn-outline-primary" onClick={onProcess}>Preprocess</button> 
-                    <button id="process_play" className="btn btn-outline-primary" onClick={onProcessAndPlay}>Proc & Play</button> 
-                    <button id="play" className="btn btn-success" onClick={onPlay}>Play</button> 
-                    <button id="stop" className="btn btn-danger" onClick={onStop}>Stop</button> 
+                <div className="d-flex justify-content-center align-items-center gap-4 fs-3">
+                    <i id="process" className=" bi bi-arrow-clockwise icon-btn" onClick={onProcess} title="Preprocess"></i>
+                    <i id="process_play" className="bi bi-play-circle-fill icon-btn" onClick={onProcessAndPlay} title="Proc and Play"></i>
+                    <i id="play" className="bi bi-play-fill icon-btn" onClick={onPlay} title="Play"></i>
+                    <i id="stop" className="bi bi-stop-fill icon-btn" onClick={onStop} title="Stop"></i>
                 </div> 
             </nav>
         </div>
