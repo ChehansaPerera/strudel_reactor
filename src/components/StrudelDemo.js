@@ -6,12 +6,27 @@ import ControlButtons from "./ControlButtons";
 import OptionButtons from "./OptionButtons";
 import TextEditor from "./TextEditor";
 
+import D3Graph from "./D3Graph";
+
 function StrudelDemo() {
     const hasRun = useRef(false);
     const [procText, setProcText] = useState("");
     const [option, setOption] = useState("on");
 
-    const handleProcess = () => Proc();
+    const [graphData, setGraphData] = useState([]);
+    const handleProcess = () => {
+        Proc()
+
+        const text = document.getElementById("proc")?.value || "";
+        const counts = {};
+
+        for (let char of text) {
+            if (char.trim() !== "") counts[char] = (counts[char] || 0) + 1;
+        }
+
+        const formattedData = Object.entries(counts).map(([note, count]) => ({ note, count }));
+        setGraphData(formattedData);
+    };
     const handleProcAndPlay = () => ProcAndPlay();
 
     useEffect(() => {
@@ -45,7 +60,7 @@ function StrudelDemo() {
                         <OptionButtons option={option} setOption={setOption} ProcAndPlay={ProcAndPlay} />
                     </div>
                 </div>
-
+                <D3Graph data={graphData} /> 
                 <canvas id="roll" className="w-100 mt-4" height="300"></canvas>
             </main>
 
