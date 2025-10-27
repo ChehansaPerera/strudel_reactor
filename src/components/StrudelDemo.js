@@ -44,24 +44,35 @@ function StrudelDemo() {
                 </div>
             </header>
 
-            <main>
-                <div className="container-fluid my-5">
-                    <div className="row g-4">
-                        <TextEditor procText={procText} setProcText={setProcText} />
-                        <ControlButtons onProcess={handleProcess} onProcessAndPlay={handleProcAndPlay} onPlay={handlePlay} onStop={handleStop} />
+            <main className="py-5" style={{ backgroundColor: "#f8f9fa" }}>
+                <div className="container-fluid px-5">
+                    <div className="row g-4 mb-4">
+                        <div className="col-lg-7 d-flex flex-column gap-4">
+                                <TextEditor procText={procText} setProcText={setProcText} />
+
+                            <div className="card shadow-sm rounded-4 p-3">
+                                <h5 className="text-indigo-700 fw-bold mb-3">Pattern Editor</h5>
+                                <div id="editor" className="border rounded-3 p-3 mb-3" style={{ minHeight: "160px", borderColor: "#dee2e6", backgroundColor: "#fff" }}></div>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-5 d-flex flex-column gap-4">
+                                <ControlButtons onProcess={handleProcess} onProcessAndPlay={handleProcAndPlay} onPlay={handlePlay} onStop={handleStop}/>
+                                <OptionButtons option={option} setOption={setOption} ProcAndPlay={ProcAndPlay}/>
+
+                            <div className="card shadow-sm rounded-4 p-3">
+                                <h5 className="text-warning fw-bold mb-3">Graph Output</h5>
+                                <D3Graph data={graphData} />
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="row mt-5 g-4">
-                        <div className="col-md-8">
-                            <h5 className="text-indigo-700 fw-semibold mb-3">Pattern Editor</h5>
-                            <div id="editor" className="border border-gray-200 rounded-2 p-2 mb-3" />
-                            <div id="output" className="border border-gray-100 rounded-2 p-2 bg-gray-50" />
-                        </div>
-                        <OptionButtons option={option} setOption={setOption} ProcAndPlay={ProcAndPlay} />
+                    <div className="card shadow-sm rounded-4 p-3">
+                        <h5 className="text-info fw-bold mb-3">Canva</h5>
+                        <canvas id="roll" className="w-100 mt-4" height="300"></canvas>
                     </div>
+
                 </div>
-                <D3Graph data={graphData} /> 
-                <canvas id="roll" className="w-100 mt-4" height="300"></canvas>
             </main>
 
             <footer className="text-center text-muted py-4 border-top mt-5">
