@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import {setupStrudel,Proc,ProcAndPlay,handlePlay,handleStop,} from "./StrudelSetup";
+import { setupStrudel, Proc, ProcAndPlay, handlePlay, handleStop,} from "./StrudelSetup";
 import { stranger_tune } from "../tunes";
 
 import ControlButtons from "./ControlButtons";
@@ -57,7 +57,7 @@ function StrudelDemo() {
                         </div>
 
                         <div className="col-lg-5 d-flex flex-column gap-4">
-                                <ControlButtons onProcess={handleProcess} onProcessAndPlay={handleProcAndPlay} onPlay={handlePlay} onStop={handleStop}/>
+                            <ControlButtons onProcess={handleProcess} onProcessAndPlay={handleProcAndPlay} onPlay={handlePlay} onStop={handleStop} />
                                 <OptionButtons option={option} setOption={setOption} ProcAndPlay={ProcAndPlay}/>
 
                             <div className="card shadow-sm rounded-4 p-3">

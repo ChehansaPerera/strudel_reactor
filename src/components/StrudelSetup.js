@@ -8,6 +8,9 @@ import { registerSoundfonts } from "@strudel/soundfonts";
 import console_monkey_patch from "../console-monkey-patch";
 
 let globalEditor = null;
+let masterGainNode = null;
+let globalPlaybackRate = 1.0;
+
 
 export const ProcessText = () => {
     let replace = "";
@@ -29,6 +32,7 @@ export const Proc = () => {
 
 export const ProcAndPlay = () => {
     if (globalEditor && globalEditor.repl.state.started === true) {
+        console.log(globalEditor)
         Proc();
         globalEditor.evaluate();
     }
@@ -75,4 +79,28 @@ export const handlePlay = () => {
 
 export const handleStop = () => {
     if (globalEditor) globalEditor.stop();
+};
+
+export const setGlobalVolume = (value) => {
+    const ctx = getAudioContext();
+    if (!masterGainNode) {
+        masterGainNode = ctx.createGain();
+        masterGainNode.connect(ctx.destination);
+    }
+    masterGainNode.gain.value = value;
+};
+
+export const setPlaybackSpeed = (value) => {
+    const speed = parseFloat(value);
+    if (!isFinite(speed) || speed <= 0) return;
+
+    globalPlaybackRate = speed;
+
+    if (globalEditor && globalEditor.repl.state.started) {
+        globalEditor.repl.outputs.forEach(node => {
+            if (node.playbackRate) node.playbackRate.value = speed;
+        });
+    }
+
+    console.log("Playback speed set to:", speed);
 };
