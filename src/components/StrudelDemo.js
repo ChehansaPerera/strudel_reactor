@@ -60,7 +60,7 @@ function StrudelDemo() {
                         </div>
 
                         <div className="col-lg-5 d-flex flex-column gap-4">
-                            <ControlButtons onProcess={handleProcess} onProcessAndPlay={handleProcAndPlay} onPlay={handlePlay} onStop={handleStop}/>
+                            <ControlButtons onProcess={handleProcess} onProcessAndPlay={handleProcAndPlay} onPlay={handlePlay} onStop={handleStop} instrument={instrument} option={option} setInstrument={setInstrument} setOption={setOption} />
 
                             <OptionButtons option={option} setOption={setOption} ProcAndPlay={ProcAndPlay} instrument={instrument} setInstrument={setInstrument} />
 
