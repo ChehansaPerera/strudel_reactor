@@ -13,30 +13,44 @@ let globalPlaybackRate = 1.0;
 
 
 export const ProcessText = () => {
-    let replace = "";
-    if (document.getElementById("flexRadioDefault2").checked) {
-        replace = "_";
-    }
-    return replace;
+    const hushSelected = document.getElementById("flexRadioDefault2")?.checked;
+    return hushSelected ? "_" : "";
 };
 
 export const Proc = () => {
     const procField = document.getElementById("proc");
-    if (!procField) return;
+    if (!procField || !globalEditor) return;
 
     const procText = procField.value || "";
-    const procTextReplaced = procText.replaceAll("<p1_Radio>", ProcessText);
-    ProcessText(procText);
-    if (globalEditor) globalEditor.setCode(procTextReplaced);
+    const replacedText = procText.replaceAll("<p1_Radio>", ProcessText());
+    globalEditor.setCode(replacedText);
 };
 
-export const ProcAndPlay = () => {
-    if (globalEditor && globalEditor.repl.state.started === true) {
-        console.log(globalEditor)
+export const ProcAndPlay = async () => {
+    try {
+        await initAudioOnFirstClick();
+
+        if (!globalEditor) {
+            console.warn("Strudel editor not initialised yet.");
+            return;
+        }
+
         Proc();
-        globalEditor.evaluate();
+
+        if (!globalEditor.repl.state.started) {
+            await globalEditor.evaluate();
+            console.log("Started Strudel playback for the first time");
+        } else {
+
+            globalEditor.evaluate();
+            console.log("Replayed Strudel");
+        }
+
+    } catch (err) {
+        console.error("ProcAndPlay error:", err);
     }
 };
+
 
 export const setupStrudel = async (stranger_tune, setProcText) => {
     console_monkey_patch();
@@ -90,17 +104,32 @@ export const setGlobalVolume = (value) => {
     masterGainNode.gain.value = value;
 };
 
+
 export const setPlaybackSpeed = (value) => {
     const speed = parseFloat(value);
     if (!isFinite(speed) || speed <= 0) return;
 
     globalPlaybackRate = speed;
 
-    if (globalEditor && globalEditor.repl.state.started) {
-        globalEditor.repl.outputs.forEach(node => {
-            if (node.playbackRate) node.playbackRate.value = speed;
-        });
+    const procField = document.getElementById("proc");
+    if (procField) {
+        let code = procField.value;
+
+        const regex = /setcps\((\d+)\s*\/\s*60\s*\/\s*4\)/;
+        const match = code.match(regex);
+
+        if (match) {
+            const oldBPM = parseFloat(match[1]);
+            const newBPM = 140 * speed;
+            code = code.replace(regex, `setcps(${newBPM}/60/4)`);
+
+            procField.value = code;
+            if (globalEditor) globalEditor.setCode(code);
+            console.log(`setcps updated - ${newBPM} BPM`);
+        }
     }
 
     console.log("Playback speed set to:", speed);
 };
+
+

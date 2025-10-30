@@ -3,40 +3,40 @@
   "WorkspaceRootPath": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\strudeldemo.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\strudeldemo.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\optionbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\optionbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\texteditor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\texteditor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\d3graph.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\d3graph.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\optionbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\optionbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\strudeldemo.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\strudeldemo.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\controlbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\controlbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\public\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:public\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\strudelsetup.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\strudelsetup.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\public\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:public\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\d3graph.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\d3graph.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\reportwebvitals.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,20 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "index.html",
-              "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\public\\index.html",
-              "RelativeDocumentMoniker": "public\\index.html",
-              "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\public\\index.html",
-              "RelativeToolTip": "public\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-10-27T09:12:29.006Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "D3Graph.js",
               "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\D3Graph.js",
               "RelativeDocumentMoniker": "src\\components\\D3Graph.js",
@@ -91,12 +78,11 @@
               "RelativeToolTip": "src\\components\\D3Graph.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-25T09:44:59.337Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T09:44:59.337Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "App.js",
               "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\App.js",
               "RelativeDocumentMoniker": "src\\App.js",
@@ -104,25 +90,24 @@
               "RelativeToolTip": "src\\App.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-23T06:30:23.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T06:30:23.446Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "ControlButtons.js",
               "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\ControlButtons.js",
               "RelativeDocumentMoniker": "src\\components\\ControlButtons.js",
               "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\ControlButtons.js",
               "RelativeToolTip": "src\\components\\ControlButtons.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-10-23T10:34:31.587Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "App.css",
               "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\App.css",
               "RelativeDocumentMoniker": "src\\App.css",
@@ -135,26 +120,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "StrudelSetup.js",
               "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\StrudelSetup.js",
               "RelativeDocumentMoniker": "src\\components\\StrudelSetup.js",
               "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\StrudelSetup.js",
               "RelativeToolTip": "src\\components\\StrudelSetup.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-10-25T06:09:41.126Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "StrudelDemo.js",
               "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\StrudelDemo.js",
               "RelativeDocumentMoniker": "src\\components\\StrudelDemo.js",
               "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\StrudelDemo.js",
               "RelativeToolTip": "src\\components\\StrudelDemo.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAwFkAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-10-25T04:32:03.147Z",
               "EditorCaption": ""
@@ -167,23 +152,35 @@
               "RelativeDocumentMoniker": "src\\components\\TextEditor.js",
               "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\TextEditor.js",
               "RelativeToolTip": "src\\components\\TextEditor.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-10-23T13:09:58.847Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "OptionButtons.js",
               "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\OptionButtons.js",
               "RelativeDocumentMoniker": "src\\components\\OptionButtons.js",
               "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\OptionButtons.js",
               "RelativeToolTip": "src\\components\\OptionButtons.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-10-23T12:22:41.995Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\public\\index.html",
+              "RelativeDocumentMoniker": "public\\index.html",
+              "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\public\\index.html",
+              "RelativeToolTip": "public\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-27T09:12:29.006Z"
             },
             {
               "$type": "Document",
