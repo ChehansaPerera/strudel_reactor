@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\controlbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\controlbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\optionbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\optionbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\strudeldemo.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -15,24 +19,20 @@
       "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\texteditor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\tunes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\tunes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\optionbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\optionbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\controlbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\controlbuttons.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\components\\strudelsetup.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\components\\strudelsetup.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\tunes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\tunes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|solutionrelative:src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C538C04-AF09-44AC-9272-6DDEAA808F25}|ReactAssignment.esproj|d:\\unisa work\\year 02\\semester 02\\web technology\\a code\\strudel_reactor\\public\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -58,21 +58,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "tunes.js",
-              "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\tunes.js",
-              "RelativeDocumentMoniker": "src\\tunes.js",
-              "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\tunes.js",
-              "RelativeToolTip": "src\\tunes.js",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAwwGMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-29T23:05:08.115Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -88,6 +75,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "tunes.js",
+              "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\tunes.js",
+              "RelativeDocumentMoniker": "src\\tunes.js",
+              "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\tunes.js",
+              "RelativeToolTip": "src\\tunes.js",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAwwGMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-29T23:05:08.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "App.js",
               "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\App.js",
               "RelativeDocumentMoniker": "src\\App.js",
@@ -99,28 +98,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "ControlButtons.js",
               "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\ControlButtons.js",
               "RelativeDocumentMoniker": "src\\components\\ControlButtons.js",
               "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\ControlButtons.js",
               "RelativeToolTip": "src\\components\\ControlButtons.js",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAAwGwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-23T10:34:31.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:34:31.587Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "App.css",
               "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\App.css",
               "RelativeDocumentMoniker": "src\\App.css",
               "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\App.css",
               "RelativeToolTip": "src\\App.css",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACkAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAkwKYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-25T08:08:09.695Z"
+              "WhenOpened": "2025-10-25T08:08:09.695Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -132,44 +131,43 @@
               "RelativeToolTip": "src\\components\\StrudelSetup.js",
               "ViewState": "AgIAAGwAAAAAAAAAAAAwwIcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-25T06:09:41.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T06:09:41.126Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "StrudelDemo.js",
               "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\StrudelDemo.js",
               "RelativeDocumentMoniker": "src\\components\\StrudelDemo.js",
               "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\StrudelDemo.js",
               "RelativeToolTip": "src\\components\\StrudelDemo.js",
-              "ViewState": "AgIAADEAAAAAAAAAAAAwwE8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAADgAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-10-25T04:32:03.147Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TextEditor.js",
               "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\TextEditor.js",
               "RelativeDocumentMoniker": "src\\components\\TextEditor.js",
               "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\TextEditor.js",
               "RelativeToolTip": "src\\components\\TextEditor.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-10-23T13:09:58.847Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "OptionButtons.js",
               "DocumentMoniker": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\OptionButtons.js",
               "RelativeDocumentMoniker": "src\\components\\OptionButtons.js",
               "ToolTip": "D:\\UNISA WORK\\Year 02\\Semester 02\\Web Technology\\A Code\\strudel_reactor\\src\\components\\OptionButtons.js",
               "RelativeToolTip": "src\\components\\OptionButtons.js",
-              "ViewState": "AgIAABMAAAAAAAAAAAAwwC4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswDgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-10-23T12:22:41.995Z",
               "EditorCaption": ""

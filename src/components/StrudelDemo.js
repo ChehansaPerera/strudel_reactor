@@ -40,21 +40,21 @@ function StrudelDemo() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-gray-50 text-gray-800">
+        <div className="min-h-screen text-gray-200">
             <header className="bg-indigo-600 py-4 shadow">
                 <div className="container-fluid text-center">
                     <h2>Strudel Demo</h2>
                 </div>
             </header>
 
-            <main className="py-5" style={{ backgroundColor: "#f8f9fa" }}>
+            <main className="py-5" style={{ backgroundColor: "#1c1c1f" }}>
                 <div className="container-fluid px-5">
                     <div className="row g-4 mb-4">
                         <div className="col-lg-7 d-flex flex-column gap-4">
                             <TextEditor procText={procText} setProcText={setProcText} />
 
-                            <div className="card shadow-sm rounded-4 p-3">
-                                <h5 className="text-indigo-700 fw-bold mb-3"> Pattern Editor </h5>
+                            <div className="card shadow-sm rounded-4 p-3" style={{ backgroundColor: '#1c1c1f' }}>
+                                <h5 className="fw-bold mb-3" style={{ color: '#a3a3ff' }}> Pattern Editor </h5>
                                 <div id="editor" className="border rounded-3 p-3 mb-3" style={{minHeight: "160px", borderColor: "#dee2e6", backgroundColor: "#fff", }}></div>
                             </div>
                         </div>
@@ -64,16 +64,16 @@ function StrudelDemo() {
 
                             <OptionButtons option={option} setOption={setOption} ProcAndPlay={ProcAndPlay} instrument={instrument} setInstrument={setInstrument} />
 
-                            <div className="card shadow-sm rounded-4 p-3">
+                            <div className="card shadow-sm rounded-4 p-3" style={{ backgroundColor: '#1c1c1f' }}>
                                 <h5 className="text-warning fw-bold mb-3">Graph Output</h5>
                                 <D3Graph data={graphData} />
                             </div>
                         </div>
                     </div>
 
-                    <div className="card shadow-sm rounded-4 p-3">
+                    <div className="card shadow-sm rounded-4 p-3" style={{ backgroundColor: '#1c1c1f' }}>
                         <h5 className="text-info fw-bold mb-3">Canva</h5>
-                        <canvas id="roll" className="w-100 mt-4" height="300"></canvas>
+                        <canvas id="roll" className="w-100 mt-4" height="150"></canvas>
                     </div>
                 </div>
             </main>

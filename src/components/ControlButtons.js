@@ -76,10 +76,10 @@ function ControlButtons({ onPlay, onStop, onProcess, onProcessAndPlay, instrumen
     };
 
     return (
-        <nav className="bg-white shadow-sm rounded-3 p-3 text-center">
-            <h5 className="text-primary fw-bold mb-3">Controls</h5>
+        <nav className="controls-container">
+            <h5 className="controls-title">Controls</h5>
 
-            <div className="d-flex justify-content-center align-items-center gap-4 fs-3">
+            <div className="controls-icons">
                 <i id="process" className="bi bi-arrow-clockwise icon-btn" onClick={onProcess} title="Preprocess"></i>
                 <i id="process_play" className="bi bi-play-circle-fill icon-btn" onClick={onProcessAndPlay} title="Proc and Play"></i>
                 <i id="play" className="bi bi-play-fill icon-btn" onClick={onPlay} title="Play"></i>
@@ -90,14 +90,14 @@ function ControlButtons({ onPlay, onStop, onProcess, onProcessAndPlay, instrumen
                 <input type="file" id="uploadJSON" accept=".json" onChange={handleUploadJSON} style={{ display: "none" }}/>
             </div>
 
-            <div className="px-4 py-2 bg-white rounded-3 shadow-sm d-flex flex-column">
-                <label htmlFor="volumeSlider" className="form-label fw-semibold text-secondary mb-1"> Volume: {(volume * 100).toFixed(0)}% </label>
-                <input type="range" className="form-range" id="volumeSlider" min="0" max="1" step="0.01" value={volume} onChange={handleVolumeChange} style={{ accentColor: "#4f46e5", cursor: "pointer" }}/>
+            <div className="control-section">
+                <label htmlFor="volumeSlider" className="control-label"> Volume: {(volume * 100).toFixed(0)}% </label>
+                <input type="range" className="control-range" id="volumeSlider" min="0" max="1" step="0.01" value={volume} onChange={handleVolumeChange} style={{ accentColor: "#4f46e5", cursor: "pointer" }}/>
             </div>
 
-            <div className="d-flex justify-content-center align-items-center gap-3 px-4 py-2 bg-white rounded-3 shadow-sm">
+            <div className="control-section">
                 <label htmlFor="speedInput" className="form-label fw-semibold text-secondary mb-1"> Speed: {speed.toFixed(2)}x </label>
-                <input type="number" id="speedInput" className="form-control" min="0.5" max="2" step="0.05" value={speed} onChange={handleSpeedChange} style={{width: "80px", textAlign: "center", padding: "0.25rem 0.5rem",fontSize: "0.9rem",}}/>
+                <input type="number" id="speedInput" className="control-number" min="0.5" max="2" step="0.05" value={speed} onChange={handleSpeedChange} style={{width: "80px", textAlign: "center", padding: "0.25rem 0.5rem",fontSize: "0.9rem",}}/>
             </div>
 
         </nav>
