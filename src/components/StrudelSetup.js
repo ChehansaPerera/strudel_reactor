@@ -26,7 +26,7 @@ export const Proc = () => {
     globalEditor.setCode(replacedText);
 };
 
-export const ProcAndPlay = async () => {
+export const ProcAndPlay = async (instrument = "all") => {
     try {
         await initAudioOnFirstClick();
 
@@ -35,18 +35,76 @@ export const ProcAndPlay = async () => {
             return;
         }
 
-        Proc();
+        const procField = document.getElementById("proc");
+        if (!procField) {
+            return;
+        }
+        const originalCode = procField.value || "";
 
-        if (!globalEditor.repl.state.started) {
+        if (instrument === "all") {
+            
+            try
+            {
+                if (globalEditor.repl?.state?.started) globalEditor.stop();
+            }
+            catch (e)
+            { }
+            globalEditor.setCode(originalCode);
             await globalEditor.evaluate();
-            console.log("Started Strudel playback for the first time");
-        } else {
-
-            globalEditor.evaluate();
-            console.log("Replayed Strudel");
+            console.log("Playing all instruments");
+            return;
         }
 
-    } catch (err) {
+        const lines = originalCode.split(/\r?\n/);
+
+        const labelRE = /^\s*[A-Za-z0-9_]+\s*:/;
+        let firstLabelIndex = lines.findIndex(l => labelRE.test(l));
+        if (firstLabelIndex === -1) firstLabelIndex = lines.length;
+
+        const headerLines = lines.slice(0, firstLabelIndex);
+
+        const labelPositions = [];
+        for (let i = firstLabelIndex; i < lines.length; i++) {
+            const m = lines[i].match(/^\s*([A-Za-z0-9_]+)\s*:/);
+            if (m) labelPositions.push({ name: m[1].trim(), idx: i });
+        }
+
+        const blocks = {};
+        for (let j = 0; j < labelPositions.length; j++) {
+            const name = labelPositions[j].name;
+            const start = labelPositions[j].idx;
+            const end = (j + 1 < labelPositions.length) ? labelPositions[j + 1].idx : lines.length;
+            blocks[name] = lines.slice(start, end).join("\n");
+        }
+
+        const instrumentMap = {
+            bass: ["bassline"],
+            synth: ["main_arp"],
+            drum: ["drums", "drums2"]
+        };
+
+        const wantedBlocks = instrumentMap[instrument] || [];
+
+        let assembledParts = headerLines.filter(Boolean);
+        assembledParts.push("");
+        assembledParts = assembledParts.concat(wantedBlocks.filter(n => blocks[n]).map(n => blocks[n]));
+        const assembled = assembledParts.join("\n\n");
+
+        const finalCode = assembled.trim().length ? assembled : originalCode;
+
+        try
+        {
+            if (globalEditor.repl?.state?.started) globalEditor.stop();
+        }
+        catch (e) { }
+
+        globalEditor.setCode(finalCode);
+
+        await globalEditor.evaluate();
+
+        console.log(`Playing instrument filter: ${instrument}`);
+    }
+    catch (err) {
         console.error("ProcAndPlay error:", err);
     }
 };

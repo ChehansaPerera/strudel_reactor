@@ -33,7 +33,7 @@ function OptionButtons({ option, setOption, instrument, setInstrument }) {
             <br />
             <h6 className="option-controller-title">Instrument Selection</h6>
             <div className="instrument-options">
-                {["bass", "synth", "drum"].map((ins) => (
+                {["all", "bass", "synth", "drum"].map((ins) => (
                     <div className="form-check" key={ins}>
                         <input
                             className="form-check-input"

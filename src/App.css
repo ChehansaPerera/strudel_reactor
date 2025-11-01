@@ -73,24 +73,25 @@
 }
 
 .icon-btn {
-    color: #e2e2e2;
-    background: #2a2a2e;
+    color: #fff;
+    background: linear-gradient(135deg, #ff6ec7, #00ffff, #8a2be2);
     border-radius: 50%;
     padding: 0.6rem 0.75rem;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-size: 200% 200%;
 }
 
 .icon-btn:hover {
-    color: #60a5fa;
-    background-color: #34343a;
-    transform: translateY(-2px);
+    background-position: right center;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
 }
 
 .icon-btn:active {
-    transform: scale(0.85);
-    opacity: 0.7;
+    transform: scale(0.9);
+    opacity: 0.8;
 }
 
 .control-section {
@@ -179,25 +180,25 @@
     padding: 0.4rem 0.8rem;
     text-align: center;
     border-radius: 12px;
-    border: 1px solid #3399ff;
+    border: 1px solid #3399ff; 
     cursor: pointer;
     transition: all 0.25s ease;
-    background-color: #2a2a2e;
+    background-color: #2a2a2e; 
     color: #fff;
     font-weight: 600;
     white-space: nowrap;
 }
 
 .option-controller .form-check-label:hover {
-    background-color: #3399ff;
+    background-color: #3399ff; 
     color: #fff;
     transform: translateY(-1px);
 }
 
 .option-controller input[type="radio"]:checked + .form-check-label {
-    background-color: #3399ff;
+    background: linear-gradient(135deg, #ff6ec7, #00ffff, #8a2be2); 
     color: #fff;
-    border-color: #3399ff;
+    border-color: #ff66ff; 
 }
 
 .instrument-options {
@@ -213,8 +214,38 @@
     flex: 0 1 auto;
 }
 
-/*---------------------------------------------------------*/
+.instrument-options input[type="radio"] {
+    display: none;
+}
 
+.instrument-options .form-check-label {
+    position: relative;
+    padding-left: 2rem; 
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.instrument-options .form-check-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    border: 2px solid #3399ff; 
+    background: #2a2a2e; 
+    transition: all 0.25s ease;
+}
+
+.instrument-options input[type="radio"]:checked + .form-check-label::before {
+    background: linear-gradient(135deg, #ff6ec7, #00ffff, #8a2be2);
+    border-color: #ff66ff;
+}
+
+/*---------------------------------------------------------*/
 /* TextEditor */
 .text-editor-container {
     background-color: #1c1c1f;
