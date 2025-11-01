@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { setGlobalVolume, setPlaybackSpeed } from "./StrudelSetup";
 
-function ControlButtons({ onPlay, onStop, onProcess, onProcessAndPlay, instrument, option, setInstrument, setOption }) {
+function ControlButtons({ onPlay, onStop, onProcess, onProcessAndPlay, instrument, option, setInstrument, setOption, setProcText }) {
     const [volume, setVolume] = useState(0.8);
     const [speed, setSpeed] = useState(1.0);
 
@@ -16,7 +16,8 @@ function ControlButtons({ onPlay, onStop, onProcess, onProcessAndPlay, instrumen
         if (newSpeed < 0.5) newSpeed = 0.5;
         if (newSpeed > 2) newSpeed = 2;
         setSpeed(newSpeed);
-        setPlaybackSpeed(newSpeed);
+        setPlaybackSpeed(newSpeed, setProcText);
+
     };
 
     // Download Json

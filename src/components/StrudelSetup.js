@@ -105,13 +105,15 @@ export const setGlobalVolume = (value) => {
 };
 
 
-export const setPlaybackSpeed = (value) => {
+export const setPlaybackSpeed = (value, setProcText) => {
     const speed = parseFloat(value);
     if (!isFinite(speed) || speed <= 0) return;
 
     globalPlaybackRate = speed;
+    window.currentPlaybackSpeed = speed;
 
     const procField = document.getElementById("proc");
+
     if (procField) {
         let code = procField.value;
 
@@ -125,6 +127,8 @@ export const setPlaybackSpeed = (value) => {
 
             procField.value = code;
             if (globalEditor) globalEditor.setCode(code);
+            if (setProcText) setProcText(code);
+
             console.log(`setcps updated - ${newBPM} BPM`);
         }
     }

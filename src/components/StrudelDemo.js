@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { setupStrudel, Proc, ProcAndPlay, handlePlay, handleStop,} from "./StrudelSetup";
+import { setupStrudel, Proc, ProcAndPlay, handlePlay, handleStop, setPlaybackSpeed } from "./StrudelSetup";
 import { stranger_tune } from "../tunes";
 
 import ControlButtons from "./ControlButtons";
@@ -15,9 +15,23 @@ function StrudelDemo() {
     const [instrument, setInstrument] = useState("all");
 
     const [graphData, setGraphData] = useState([]);
+    const [isPlaying, setIsPlaying] = useState(false); 
+    const graphIntervalRef = useRef(null);
 
-    const handleProcess = () => {
-        Proc();
+    const startGraphAnimation = () => {
+        if (graphIntervalRef.current) clearInterval(graphIntervalRef.current);
+        let frame = 0;
+        graphIntervalRef.current = setInterval(() => {
+            const dynamicData = Array.from({ length: 30 }, (_, i) => ({
+                note: i,
+                count: 20 + Math.abs(Math.sin(frame / 5 + i / 3)) * 60,
+            }));
+            setGraphData(dynamicData);
+            frame++;
+        }, 100);
+    };
+
+    const generateStaticGraph = () => {
         const text = document.getElementById("proc")?.value || "";
         const counts = {};
         for (let char of text) {
@@ -30,7 +44,43 @@ function StrudelDemo() {
         setGraphData(formattedData);
     };
 
-    const handleProcAndPlay = () => ProcAndPlay(instrument);
+
+    //const handleProcess = () => {
+    //    Proc();
+    //    const text = document.getElementById("proc")?.value || "";
+    //    const counts = {};
+    //    for (let char of text) {
+    //        if (char.trim() !== "") counts[char] = (counts[char] || 0) + 1;
+    //    }
+    //    const formattedData = Object.entries(counts).map(([note, count]) => ({
+    //        note,
+    //        count,
+    //    }));
+    //    setGraphData(formattedData);
+    //};
+
+    const handleProcess = () => {
+        Proc();
+        setIsPlaying(false);      
+        generateStaticGraph();    
+    };
+
+
+    //const handleProcAndPlay = () => ProcAndPlay(instrument);
+
+    const handleProcAndPlay = () => {
+        setPlaybackSpeed(window.currentPlaybackSpeed || 1.0, setProcText); 
+        ProcAndPlay(instrument);
+        setIsPlaying(true);      
+        startGraphAnimation();    
+    };
+
+    const handleStopMusic = () => {
+        handleStop();
+        setIsPlaying(false);
+        if (graphIntervalRef.current) clearInterval(graphIntervalRef.current);
+        generateStaticGraph();
+    };
 
     useEffect(() => {
         if (!hasRun.current) {
@@ -38,7 +88,7 @@ function StrudelDemo() {
             setupStrudel(stranger_tune, setProcText);
         }
     }, []);
-
+   
     return (
         <div className="min-h-screen text-gray-200">
             <header className="bg-indigo-600 py-4 shadow">
@@ -60,7 +110,7 @@ function StrudelDemo() {
                         </div>
 
                         <div className="col-lg-5 d-flex flex-column gap-4">
-                            <ControlButtons onProcess={handleProcess} onProcessAndPlay={handleProcAndPlay} onPlay={handlePlay} onStop={handleStop} instrument={instrument} option={option} setInstrument={setInstrument} setOption={setOption} />
+                            <ControlButtons onProcess={handleProcess} onProcessAndPlay={handleProcAndPlay} onPlay={() => { handlePlay(); setIsPlaying(true); startGraphAnimation(); }} onStop={handleStopMusic} instrument={instrument} option={option} setInstrument={setInstrument} setOption={setOption} setProcText={setProcText} />
 
                             <OptionButtons option={option} setOption={setOption} ProcAndPlay={ProcAndPlay} instrument={instrument} setInstrument={setInstrument} />
 

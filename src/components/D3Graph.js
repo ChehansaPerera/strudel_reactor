@@ -5,50 +5,70 @@ function D3Graph({ data }) {
     const ref = useRef();
 
     useEffect(() => {
+        if (!data || data.length === 0) return;
+
         const svg = d3.select(ref.current);
         svg.selectAll("*").remove();
 
-        if (!data || data.length === 0) return;
-
-        const width = 400;
-        const height = 200;
+        const width = 600;
+        const height = 300;
         const margin = { top: 20, right: 20, bottom: 30, left: 40 };
 
         const x = d3
-            .scaleBand()
-            .domain(data.map((d) => d.note))
-            .range([margin.left, width - margin.right])
-            .padding(0.1);
+            .scaleLinear()
+            .domain([0, data.length - 1])
+            .range([margin.left, width - margin.right]);
 
         const y = d3
             .scaleLinear()
-            .domain([0, d3.max(data, (d) => d.count)])
+            .domain([0, d3.max(data, (d) => d.count) || 100])
             .nice()
             .range([height - margin.bottom, margin.top]);
 
-        svg
-            .append("g")
-            .attr("fill", "steelblue")
-            .selectAll("rect")
-            .data(data)
-            .join("rect")
-            .attr("x", (d) => x(d.note))
-            .attr("y", (d) => y(d.count))
-            .attr("height", (d) => y(0) - y(d.count))
-            .attr("width", x.bandwidth());
+        const line = d3
+            .line()
+            .x((_, i) => x(i))
+            .y((d) => y(d.count))
+            .curve(d3.curveMonotoneX);
+
+
+        const defs = svg.append("defs");
+
+        const gradient = defs
+            .append("linearGradient")
+            .attr("id", "line-gradient")
+            .attr("gradientUnits", "userSpaceOnUse")
+            .attr("x1", margin.left)
+            .attr("x2", width - margin.right)
+            .attr("y1", 0)
+            .attr("y2", 0);
+
+        gradient
+            .append("stop")
+            .attr("offset", "0%")
+            .attr("stop-color", "#00bcd4"); // cyan
+        gradient
+            .append("stop")
+            .attr("offset", "50%")
+            .attr("stop-color", "#9c27b0"); // purple
+        gradient
+            .append("stop")
+            .attr("offset", "100%")
+            .attr("stop-color", "#ff4081"); // pink
 
         svg
-            .append("g")
-            .attr("transform", `translate(0,${height - margin.bottom})`)
-            .call(d3.axisBottom(x));
-
-        svg
-            .append("g")
-            .attr("transform", `translate(${margin.left},0)`)
-            .call(d3.axisLeft(y));
+            .append("path")
+            .datum(data)
+            .attr("fill", "none")
+            .attr("stroke", "url(#line-gradient)")
+            .attr("stroke-width", 2.5)
+            .attr("d", line)
+            .attr("opacity", 0.95);
     }, [data]);
 
-    return <svg ref={ref} width={400} height={200} style={{ border: "1px solid lightgray", display: "block", margin: "20px auto" }}></svg>;
+    return (
+        <svg ref={ref} viewBox="0 0 600 300" style={{width: "100%", height: "300px", border: "1px solid #4b5563", borderRadius: "8px", backgroundColor: "#1c1c1f",}}></svg>
+    );
 }
 
 export default D3Graph;
