@@ -290,3 +290,20 @@
 .text-editor-textarea::placeholder {
     color: #999;
 }
+
+/*--------------------------------------------*/
+
+.header-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(to bottom, #d580ff, #80f7ff, #f9f9ff);
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    background-size: 100% 300%;
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

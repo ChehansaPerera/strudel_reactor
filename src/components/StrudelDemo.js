@@ -90,10 +90,10 @@ function StrudelDemo() {
     }, []);
    
     return (
-        <div className="min-h-screen text-gray-200">
+        <div className="min-h-screen text-gray-200" style={{ backgroundColor: '#1c1c1f' }}>
             <header className="bg-indigo-600 py-4 shadow">
                 <div className="container-fluid text-center">
-                    <h2>Strudel Demo</h2>
+                    <h2 className="header-title">Strudel Demo</h2>
                 </div>
             </header>
 
@@ -118,18 +118,18 @@ function StrudelDemo() {
                                 <h5 className="text-warning fw-bold mb-3">Graph Output</h5>
                                 <D3Graph data={graphData} />
                             </div>
-                        </div>
-                    </div>
 
-                    <div className="card shadow-sm rounded-4 p-3" style={{ backgroundColor: '#1c1c1f' }}>
-                        <h5 className="text-info fw-bold mb-3">Canva</h5>
-                        <canvas id="roll" className="w-100 mt-4" height="150"></canvas>
+                            <div className="card shadow-sm rounded-4 p-3" style={{ backgroundColor: '#1c1c1f' }}>
+                                <h5 className="text-info fw-bold mb-3">Canva</h5>
+                                <canvas id="roll" className="w-100 mt-4" height="150"></canvas>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
 
             <footer className="text-center text-muted py-4 border-top mt-5">
-                <small>Strudel Demo by Chehansa</small>
+                <small style={{ color: '#ffffff' }}>Strudel Demo by Chehansa</small>
             </footer>
         </div>
     );
