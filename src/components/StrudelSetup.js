@@ -12,19 +12,28 @@ let masterGainNode = null;
 let globalPlaybackRate = 1.0;
 
 
-export const ProcessText = () => {
-    const hushSelected = document.getElementById("flexRadioDefault2")?.checked;
-    return hushSelected ? "_" : "";
+export const ProcMute = (code) => {
+    const hushSelected = document.getElementById("optionHush")?.checked;
+    if (hushSelected) {
+        code = code.replace(
+            /(main_arp:[\s\S]*?\.postgain\()\s*pick\(gain_patterns,\s*pattern\)(\))/,
+            "$10$2"
+        );
+        console.log("HUSH enabled: main_arp muted dynamically");
+    }
+    return code;
 };
 
 export const Proc = () => {
     const procField = document.getElementById("proc");
     if (!procField || !globalEditor) return;
 
-    const procText = procField.value || "";
-    const replacedText = procText.replaceAll("<p1_Radio>", ProcessText());
-    globalEditor.setCode(replacedText);
+    let procText = procField.value || "";
+    procText = ProcMute(procText);
+    globalEditor.setCode(procText);
 };
+
+
 
 export const ProcAndPlay = async (instrument = "all") => {
     try {
@@ -40,6 +49,7 @@ export const ProcAndPlay = async (instrument = "all") => {
             return;
         }
         const originalCode = procField.value || "";
+
 
         if (instrument === "all") {
             
