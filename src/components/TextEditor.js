@@ -1,3 +1,4 @@
+/*Text editor component */
 function TextEditor({
     procText,
     setProcText

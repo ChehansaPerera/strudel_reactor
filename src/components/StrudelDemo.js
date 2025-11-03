@@ -11,19 +11,26 @@ import D3Graph from "./D3Graph";
 function StrudelDemo() {
     const hasRun = useRef(false);
     const [procText, setProcText] = useState("");
+    // Processing options
     const [option, setOption] = useState("on");
+    // Selected instrument
     const [instrument, setInstrument] = useState("all");
 
+    // Data for d3 graph
     const [graphData, setGraphData] = useState([]);
+    // Track whether it is playing
     const [isPlaying, setIsPlaying] = useState(false); 
+    // Stores interval reference for graph animation
     const graphIntervalRef = useRef(null);
 
+    // Animates graph while music is playing
     const startGraphAnimation = () => {
         if (graphIntervalRef.current) clearInterval(graphIntervalRef.current);
         let frame = 0;
         graphIntervalRef.current = setInterval(() => {
             const dynamicData = Array.from({ length: 30 }, (_, i) => ({
                 note: i,
+                // Generates wave-like data
                 count: 20 + Math.abs(Math.sin(frame / 5 + i / 3)) * 60,
             }));
             setGraphData(dynamicData);
@@ -31,6 +38,7 @@ function StrudelDemo() {
         }, 100);
     };
 
+    // Generates a static graph based on text pattern frequency
     const generateStaticGraph = () => {
         const text = document.getElementById("proc")?.value || "";
         const counts = {};
@@ -61,7 +69,8 @@ function StrudelDemo() {
 
     const handleProcess = () => {
         Proc();
-        setIsPlaying(false);      
+        setIsPlaying(false); 
+        // Update static graph after processing
         generateStaticGraph();    
     };
 
@@ -82,6 +91,7 @@ function StrudelDemo() {
         generateStaticGraph();
     };
 
+    // Run Strudel setup only one time when the page loads
     useEffect(() => {
         if (!hasRun.current) {
             hasRun.current = true;

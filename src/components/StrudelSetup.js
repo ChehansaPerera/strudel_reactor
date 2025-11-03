@@ -11,7 +11,7 @@ let globalEditor = null;
 let masterGainNode = null;
 let globalPlaybackRate = 1.0;
 
-
+// Mute main_arp section if hush option is selected
 export const ProcMute = (code) => {
     const hushSelected = document.getElementById("optionHush")?.checked;
     if (hushSelected) {
@@ -29,6 +29,7 @@ export const Proc = () => {
     if (!procField || !globalEditor) return;
 
     let procText = procField.value || "";
+    // apply hush if hush option has been selected
     procText = ProcMute(procText);
     globalEditor.setCode(procText);
 };
@@ -65,6 +66,7 @@ export const ProcAndPlay = async (instrument = "all") => {
             return;
         }
 
+        // If an instrument is selected, play the selected instrument only
         const lines = originalCode.split(/\r?\n/);
 
         const labelRE = /^\s*[A-Za-z0-9_]+\s*:/;
@@ -73,12 +75,14 @@ export const ProcAndPlay = async (instrument = "all") => {
 
         const headerLines = lines.slice(0, firstLabelIndex);
 
+        // Find where each instrument section starts
         const labelPositions = [];
         for (let i = firstLabelIndex; i < lines.length; i++) {
             const m = lines[i].match(/^\s*([A-Za-z0-9_]+)\s*:/);
             if (m) labelPositions.push({ name: m[1].trim(), idx: i });
         }
 
+        // Split code into instrument blocks
         const blocks = {};
         for (let j = 0; j < labelPositions.length; j++) {
             const name = labelPositions[j].name;
@@ -87,6 +91,7 @@ export const ProcAndPlay = async (instrument = "all") => {
             blocks[name] = lines.slice(start, end).join("\n");
         }
 
+        // Map instruments to their code sections
         const instrumentMap = {
             bass: ["bassline"],
             synth: ["main_arp"],
@@ -95,6 +100,7 @@ export const ProcAndPlay = async (instrument = "all") => {
 
         const wantedBlocks = instrumentMap[instrument] || [];
 
+        // Combine header and selected instrument blocks
         let assembledParts = headerLines.filter(Boolean);
         assembledParts.push("");
         assembledParts = assembledParts.concat(wantedBlocks.filter(n => blocks[n]).map(n => blocks[n]));
@@ -163,6 +169,7 @@ export const handleStop = () => {
     if (globalEditor) globalEditor.stop();
 };
 
+// Set global volume for playback
 export const setGlobalVolume = (value) => {
     const ctx = getAudioContext();
     if (!masterGainNode) {
@@ -172,7 +179,7 @@ export const setGlobalVolume = (value) => {
     masterGainNode.gain.value = value;
 };
 
-
+// Change playback speed (BPM)
 export const setPlaybackSpeed = (value, setProcText) => {
     const speed = parseFloat(value);
     if (!isFinite(speed) || speed <= 0) return;
@@ -188,6 +195,7 @@ export const setPlaybackSpeed = (value, setProcText) => {
         const regex = /setcps\((\d+)\s*\/\s*60\s*\/\s*4\)/;
         const match = code.match(regex);
 
+        // Update setcps() line with new BPM
         if (match) {
             const oldBPM = parseFloat(match[1]);
             const newBPM = 140 * speed;
