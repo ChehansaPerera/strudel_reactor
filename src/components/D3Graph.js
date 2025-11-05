@@ -14,7 +14,7 @@ function D3Graph({ data }) {
         // Remove any existing svg element before rendering
         svg.selectAll("*").remove();
 
-        const width = 600;
+        const width = ref.current.clientWidth; 
         const height = 300;
         const margin = { top: 20, right: 20, bottom: 30, left: 40 };
 
@@ -77,7 +77,7 @@ function D3Graph({ data }) {
     }, [data]);
 
     return (
-        <svg ref={ref} viewBox="0 0 600 300" style={{width: "100%", height: "300px", border: "1px solid #4b5563", borderRadius: "8px", backgroundColor: "#1c1c1f",}}></svg>
+        <svg ref={ref} style={{ width: "100%", height: "300px", border: "1px solid #4b5563", borderRadius: "8px", backgroundColor: "#1c1c1f" }}></svg>
     );
 }
 

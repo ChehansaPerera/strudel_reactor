@@ -25,18 +25,61 @@ function StrudelDemo() {
 
     // Animates graph while music is playing
     const startGraphAnimation = () => {
+        // Clear any existing animation interval
         if (graphIntervalRef.current) clearInterval(graphIntervalRef.current);
-        let frame = 0;
+
+        // Extract bpm from Strudel code
+        const text = document.getElementById("proc")?.value || "";
+        const match = text.match(/setcps\(([\d.]+)\s*\/\s*60\s*\/\s*4\)/);
+        // default bpm
+        let bpm = 140;
+        if (match) bpm = parseFloat(match[1]);
+
+        // Calculate beat interval in milliseconds
+        const beatInterval = (60 / bpm) * 1000;
+        // Set frame rate and update interval for animation
+        const frameRate = 60;
+        const updateInterval = 1000 / frameRate;
+
+        let time = 0;
+
+        // Adjust speed based on bpm
+        const baseSpeed = 0.35 + (bpm - 100) / 400;
+        const phaseSpeed = (2 * Math.PI) / (beatInterval / updateInterval) * baseSpeed;
+
         graphIntervalRef.current = setInterval(() => {
-            const dynamicData = Array.from({ length: 30 }, (_, i) => ({
-                note: i,
-                // Generates wave-like data
-                count: 20 + Math.abs(Math.sin(frame / 5 + i / 3)) * 60,
-            }));
+            time += phaseSpeed;
+
+            // Generate dynamic graph data
+            const dynamicData = Array.from({ length: 30 }, (_, i) => {
+                const xOffset = i * 0.6;
+
+                // Two types of waves for variation
+                const longWave = Math.sin(time / 3 + xOffset * 0.8);
+                const shortWave = Math.sin(time * 2 + xOffset * 2.5); 
+
+                const blend = i % 2 === 0 ? 0.75 : 0.35;
+                const mixed = blend * longWave + (1 - blend) * shortWave;
+
+                // Make the wave taller or shorter over time
+                const amp = 0.8 + 0.5 * Math.sin(time / 8 + i / 5);
+                // Add small random jitter for natural variation
+                const randomJitter = 0.9 + Math.random() * 0.2;
+                // Final wave value
+                const wave = Math.abs(mixed * amp * randomJitter);
+
+                return {
+                    note: i,
+                    count: 20 + wave * 85,
+                };
+            });
+            // Update graph state
             setGraphData(dynamicData);
-            frame++;
-        }, 100);
+        }, updateInterval);
     };
+
+
+
 
     // Generates a static graph based on text pattern frequency
     const generateStaticGraph = () => {
@@ -109,31 +152,36 @@ function StrudelDemo() {
 
             <main className="py-5" style={{ backgroundColor: "#1c1c1f" }}>
                 <div className="container-fluid px-5">
+                    <div className="row d-flex gap23 align-items-start">
+                        <div className="col-6">
+                            <ControlButtons onProcess={handleProcess} onProcessAndPlay={handleProcAndPlay} onPlay={() => { handlePlay(); setIsPlaying(true); startGraphAnimation(); }} onStop={handleStopMusic} instrument={instrument} option={option} setInstrument={setInstrument} setOption={setOption} setProcText={setProcText} />
+                        </div>
+                        <div className="col-6">
+                            <OptionButtons option={option} setOption={setOption} ProcAndPlay={ProcAndPlay} instrument={instrument} setInstrument={setInstrument} />
+                        </div>
+                      
+                    </div>
+                    <div className="card shadow-sm rounded-4 p-3" style={{ backgroundColor: '#1c1c1f' }}>
+                        <h5 className="text-warning fw-bold mb-3">Graph Output</h5>
+                        <D3Graph data={graphData} />
+                    </div>
+                    <br /><br />
+                    <div className="card shadow-sm rounded-4 p-3" style={{ backgroundColor: '#1c1c1f', height: '450px' }}>
+                        <h5 className="text-info fw-bold mb-3">Canva</h5>
+                        <canvas id="roll" className="w-100 mt-4" height="60"></canvas>
+                    </div>
+                    <br /><br />
                     <div className="row g-4 mb-4">
-                        <div className="col-lg-7 d-flex flex-column gap-4">
+                        <div className="col-lg-6 d-flex flex-column gap-4">
                             <TextEditor procText={procText} setProcText={setProcText} />
-
+                        </div>
+                        <div className="col-lg-6">
                             <div className="card shadow-sm rounded-4 p-3" style={{ backgroundColor: '#1c1c1f' }}>
                                 <h5 className="fw-bold mb-3" style={{ color: '#a3a3ff' }}> Pattern Editor </h5>
-                                <div id="editor" className="border rounded-3 p-3 mb-3" style={{minHeight: "160px", borderColor: "#dee2e6", backgroundColor: "#fff", }}></div>
+                                <div id="editor" className="border rounded-3 p-3 mb-3" style={{ minHeight: "160px", maxHeight: "400px", borderColor: "#dee2e6", overflowY: "auto", backgroundColor: "#fff", }}></div>
                             </div>
                         </div>
 
-                        <div className="col-lg-5 d-flex flex-column gap-4">
-                            <ControlButtons onProcess={handleProcess} onProcessAndPlay={handleProcAndPlay} onPlay={() => { handlePlay(); setIsPlaying(true); startGraphAnimation(); }} onStop={handleStopMusic} instrument={instrument} option={option} setInstrument={setInstrument} setOption={setOption} setProcText={setProcText} />
-
-                            <OptionButtons option={option} setOption={setOption} ProcAndPlay={ProcAndPlay} instrument={instrument} setInstrument={setInstrument} />
-
-                            <div className="card shadow-sm rounded-4 p-3" style={{ backgroundColor: '#1c1c1f' }}>
-                                <h5 className="text-warning fw-bold mb-3">Graph Output</h5>
-                                <D3Graph data={graphData} />
-                            </div>
-
-                            <div className="card shadow-sm rounded-4 p-3" style={{ backgroundColor: '#1c1c1f' }}>
-                                <h5 className="text-info fw-bold mb-3">Canva</h5>
-                                <canvas id="roll" className="w-100 mt-4" height="150"></canvas>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </main>
