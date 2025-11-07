@@ -1,5 +1,9 @@
+import React, { useState } from "react";
 /*Component for choosing processing mode (ON / HUSH) and selecting instruments that only need to play*/
-function OptionButtons({ option, setOption, instrument, setInstrument }) {
+function OptionButtons({ option, setOption, instrument, setInstrument, effects, setEffects }) {
+
+    const [showEffects, setShowEffects] = useState(false);
+
     return (
         <div className="option-controller-container">
             <h5 className="option-controller-title">Processing Options</h5>
@@ -57,6 +61,60 @@ function OptionButtons({ option, setOption, instrument, setInstrument }) {
                     </div>
                 ))}
             </div>
+            <br />
+            {/* Accordion for Effects */}
+            <button className="btn btn-outline-info w-100 mt-3" onClick={() => setShowEffects(!showEffects)}>
+                {showEffects ? "Hide Effects" : "Show Effects"}
+            </button>
+
+            {showEffects && (
+                <div className="effects-panel mt-3 p-3 border rounded">
+                    <h6 className="text-warning fw-bold mb-2">Effects</h6>
+
+                    {/* Filter Sweep */}
+                    <div className="mb-3">
+                        <label htmlFor="filterSweep" className="form-label">Filter Sweep (LPF)</label>
+                        <input
+                            id="filterSweep"
+                            type="range"
+                            min="300"
+                            max="3000"
+                            value={effects.filterSweep}
+                            onChange={(e) => setEffects((prev) => ({ ...prev, filterSweep: e.target.value }))}
+                            className="form-range"
+                        />
+                    </div>
+
+                    {/* Reverb Depth */}
+                    <div className="mb-3">
+                        <label htmlFor="reverbDepth" className="form-label">Reverb Depth</label>
+                        <input
+                            id="reverbDepth"
+                            type="range"
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            value={effects.reverbDepth}
+                            onChange={(e) => setEffects((prev) => ({ ...prev, reverbDepth: e.target.value }))}
+                            className="form-range"
+                        />
+                    </div>
+
+                    {/* Auto Pan */}
+                    <div className="form-check form-switch">
+                        <input
+                            className="form-check-input"
+                            type="checkbox"
+                            id="autoPan"
+                            checked={effects.autoPan}
+                            onChange={(e) => setEffects((prev) => ({ ...prev, autoPan: e.target.checked }))}
+                        />
+                        <label className="form-check-label" htmlFor="autoPan">
+                            Auto Pan (Stereo movement)
+                        </label>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

@@ -35,8 +35,7 @@ export const Proc = () => {
 };
 
 
-
-export const ProcAndPlay = async (instrument = "all") => {
+export const ProcAndPlay = async (instrument = "all", effects = {}) => {
     try {
         await initAudioOnFirstClick();
 
@@ -46,14 +45,31 @@ export const ProcAndPlay = async (instrument = "all") => {
         }
 
         const procField = document.getElementById("proc");
-        if (!procField) {
-            return;
-        }
-        const originalCode = procField.value || "";
+        if (!procField) return;
 
+        let originalCode = procField.value || "";
 
+        // Inject live performance effects dynamically
+        let effectCode = "";
+        if (effects.filterSweep)
+            effectCode += `\nall(x => x.lpf(${effects.filterSweep}))`;
+        if (effects.reverbDepth)
+            effectCode += `\nall(x => x.room(${effects.reverbDepth}))`;
+        if (effects.autoPan)
+            effectCode += `\nall(x => x.pan(sine.range(-1,1)))`;
+        if (effects.hpf)
+            effectCode += `\nall(x => x.hpf(${effects.hpf}))`;
+        if (effects.gainBoost)
+            effectCode += `\nall(x => x.gain(${effects.gainBoost}))`;
+        if (effects.delay)
+            effectCode += `\nall(x => x.delay(${effects.delay}))`;
+
+        // Append effects to tune
+        originalCode += `\n${effectCode}\n`;
+
+        // Handle instrument filtering (bass, synth, drum, all)
         if (instrument === "all") {
-            
+
             try
             {
                 if (globalEditor.repl?.state?.started) globalEditor.stop();
@@ -104,6 +120,7 @@ export const ProcAndPlay = async (instrument = "all") => {
         let assembledParts = headerLines.filter(Boolean);
         assembledParts.push("");
         assembledParts = assembledParts.concat(wantedBlocks.filter(n => blocks[n]).map(n => blocks[n]));
+
         const assembled = assembledParts.join("\n\n");
 
         const finalCode = assembled.trim().length ? assembled : originalCode;
@@ -119,6 +136,7 @@ export const ProcAndPlay = async (instrument = "all") => {
         await globalEditor.evaluate();
 
         console.log(`Playing instrument filter: ${instrument}`);
+        console.log("Effects applied:", effects);
     }
     catch (err) {
         console.error("ProcAndPlay error:", err);

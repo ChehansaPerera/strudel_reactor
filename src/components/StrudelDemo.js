@@ -15,6 +15,7 @@ function StrudelDemo() {
     const [option, setOption] = useState("on");
     // Selected instrument
     const [instrument, setInstrument] = useState("all");
+    const [effects, setEffects] = useState({filterSweep: 1000, reverbDepth: 0.5, autoPan: false,});
 
     // Data for d3 graph
     const [graphData, setGraphData] = useState([]);
@@ -122,7 +123,7 @@ function StrudelDemo() {
 
     const handleProcAndPlay = () => {
         setPlaybackSpeed(window.currentPlaybackSpeed || 1.0, setProcText); 
-        ProcAndPlay(instrument);
+        ProcAndPlay(instrument, effects);
         setIsPlaying(true);      
         startGraphAnimation();    
     };
@@ -157,7 +158,7 @@ function StrudelDemo() {
                             <ControlButtons onProcess={handleProcess} onProcessAndPlay={handleProcAndPlay} onPlay={() => { handlePlay(); setIsPlaying(true); startGraphAnimation(); }} onStop={handleStopMusic} instrument={instrument} option={option} setInstrument={setInstrument} setOption={setOption} setProcText={setProcText} />
                         </div>
                         <div className="col-6">
-                            <OptionButtons option={option} setOption={setOption} ProcAndPlay={ProcAndPlay} instrument={instrument} setInstrument={setInstrument} />
+                            <OptionButtons option={option} setOption={setOption} ProcAndPlay={ProcAndPlay} instrument={instrument} setInstrument={setInstrument} effects={effects} setEffects={setEffects} />
                         </div>
                       
                     </div>
