@@ -63,17 +63,17 @@ function OptionButtons({ option, setOption, instrument, setInstrument, effects, 
             </div>
             <br />
             {/* Accordion for Effects */}
-            <button className="btn btn-outline-info w-100 mt-3" onClick={() => setShowEffects(!showEffects)}>
+            <button className="btn btn-outline-info w-100 mt-3 effects-toggle-btn" onClick={() => setShowEffects(!showEffects)}>
                 {showEffects ? "Hide Effects" : "Show Effects"}
             </button>
 
             {showEffects && (
-                <div className="effects-panel mt-3 p-3 border rounded">
-                    <h6 className="text-warning fw-bold mb-2">Effects</h6>
+                <div className="effects-accordion mt-3">
+                    <h6 className="effects-title">Effects</h6>
 
                     {/* Filter Sweep */}
-                    <div className="mb-3">
-                        <label htmlFor="filterSweep" className="form-label">Filter Sweep (LPF)</label>
+                    <div className="effect-control">
+                        <label htmlFor="filterSweep" className="effect-label">Filter Sweep (LPF)</label>
                         <input
                             id="filterSweep"
                             type="range"
@@ -86,8 +86,8 @@ function OptionButtons({ option, setOption, instrument, setInstrument, effects, 
                     </div>
 
                     {/* Reverb Depth */}
-                    <div className="mb-3">
-                        <label htmlFor="reverbDepth" className="form-label">Reverb Depth</label>
+                    <div className="effect-control">
+                        <label htmlFor="reverbDepth" className="effect-label">Reverb Depth</label>
                         <input
                             id="reverbDepth"
                             type="range"
@@ -101,7 +101,7 @@ function OptionButtons({ option, setOption, instrument, setInstrument, effects, 
                     </div>
 
                     {/* Auto Pan */}
-                    <div className="form-check form-switch">
+                    <div className="form-check form-switch effect-toggle">
                         <input
                             className="form-check-input"
                             type="checkbox"
