@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-/*Component for choosing processing mode (ON / HUSH) and selecting instruments that only need to play*/
+/*Component for choosing processing mode (ON / HUSH) and selecting instruments that only need to play and more effects*/
 function OptionButtons({ option, setOption, instrument, setInstrument, effects, setEffects }) {
 
     const [showEffects, setShowEffects] = useState(false);
@@ -64,8 +64,9 @@ function OptionButtons({ option, setOption, instrument, setInstrument, effects, 
             <br />
             {/* Accordion for Effects */}
             <button className="btn btn-outline-info w-100 mt-3 effects-toggle-btn" onClick={() => setShowEffects(!showEffects)}>
-                {showEffects ? "Hide Effects" : "Show Effects"}
+                {showEffects ? (<> Hide Effects  <i className="bi bi-caret-up-fill"></i> </>) : (<> Show Effects  <i className="bi bi-caret-down-fill"></i> </>)}
             </button>
+
 
             {showEffects && (
                 <div className="effects-accordion mt-3">

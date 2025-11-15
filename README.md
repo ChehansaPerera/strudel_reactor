@@ -1,10 +1,68 @@
-# Getting Started with Create React App
+# Strudel Demo - React Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React-based web application that allows users to process and play musical patterns using Strudel.cc code. It includes real-time visualisations, instrument selection, effects, and control management
 
-## Available Scripts
+## Controls Overview
 
-In the project directory, you can run:
+### Control Panel
+
+- Preprocess: Processes the code in the text editor and updates the graph visualisation. Does not play the music
+- Proc and Play: Preprocesses the current code, applies selected effects, and plays the music. Visualises a dynamic graph while playing
+- Play: Plays the current code without preprocessing. Graph animation also starts
+- Stop: Stops the music and stops the dynamic graph animation. The static graph is updated to reflect the processed pattern
+- Dowload Json: Saves the current control settings (volume, speed, selected instrument, and option) as a Json file
+- Uplaod Json: Loads previously saved control settings from a Json file
+
+### Volume Slider
+
+- Adjusts the global playback volume from 0% to 100%
+- Changes take effect immediately while playing
+
+### Speed Input
+
+- Adjusts the playback speed (BPM multiplier) between 0.5x and 2x
+- The code’s setcps() line is updated automatically when changed
+- Maximum safe playback speed is 2x, minimum is 0.5x
+
+## Options Panel
+- Processing Options
+	- ON: Default mode, normal playback
+	- HUSH: Mutes the main arp section dynamically during processing
+
+- Instrument Selection
+	- All: Plays all instruments
+	- Bass: Plays only the bassline
+	- Synth: Plays only the main arp synth
+	- Drum: Plays only drum lines
+
+- Effects Accordion (Toggle with Show/Hide Effects)
+	- Filter Sweep (LPF): Low-pass filter frequency
+	- Reverb Depth: Adds spatial echo/reverb
+	- Auto Pan: Stereo panning of sound automatically
+	- (Effects are applied live when Proc and Play or Play button is clicked)
+
+## D3Graph Visualisation
+
+- Dynamic D3Graph: Animated waveform displayed while music is playing
+- Static D3Graph: Shows the frequency of characters/notes in the Strudel code after preprocessing
+
+## Text Editor
+
+- Main area for entering or editing Strudel.cc code patterns
+- Updates are immediately reflected after Preprocess button is clciked
+
+## Usage Guidelines
+
+- Dynamic D3Graph animation is tied to the playback, stopping music will stops the animation
+- Uploading JSON requires a file exported from the same project (controls_state.json). Invalid structures are rejected
+- Effects only apply when music is played, toggling them without playing will not produce sound
+- HUSH mode only affects the main_arp section
+- Playback speed changes the setcps() value but may distort timing if set too high or too low
+
+## Songs
+
+- Currently, no new songs have been added
+- Default song used: stranger_tune from ../tunes.js
 
 ### `npm start`
 
@@ -31,40 +89,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Note: this is a one-way operation. Once you `eject`, you can't go back!
