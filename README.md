@@ -77,6 +77,14 @@ This project is a React-based web application that allows users to process and p
 	- Built around soft bell harmonics, wide reverb spaces, and moving noise-based percussion
 	- Uses slow envelopes, band-passed noise textures, and evolving stereo panning to create a relaxing, spacious soundscape
 
+#### Creative and Technical Process for the music created
+
+For both Clockwork Runner and Crystal Garden, I didn’t use any templates or copy existing Strudel code. I created the ideas by experimenting in the Strudel editor, listening to loops, and adjusting notes, rhythms, and effects until each track had the feeling I wanted.
+
+Clockwork Runner was designed to feel fast and mechanical. I built the arpeggio patterns myself, tried different note combinations, and used tight drum rhythms with a bit of randomness to create a glitchy sound. I also played with filters, envelopes, and panning to make the synth move and feel more alive.
+
+Crystal Garden was created to be soft and ambient. I chose bell-like notes, added long envelopes, and used a lot of reverb to make the sound spacious. Instead of strong drums, I used gentle noise patterns with band-pass filters and slow stereo movement to keep it calm and relaxing.
+
 ### `npm start`
 
 Runs the app in the development mode.\

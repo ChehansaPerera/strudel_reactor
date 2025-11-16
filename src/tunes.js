@@ -96,7 +96,7 @@ stack(
 
 // new music
 
-// Clockwise runner
+// Clockwork runner
 runner_arp:
 note("<c4 e4 g4 b3>*2 <d4 f4 a4>*2")
 .sound("saw")
