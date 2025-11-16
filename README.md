@@ -23,6 +23,7 @@ This project is a React-based web application that allows users to process and p
 - Adjusts the playback speed (BPM multiplier) between 0.5x and 2x
 - The code’s setcps() line is updated automatically when changed
 - Maximum safe playback speed is 2x, minimum is 0.5x
+- The speed will be automatically updated, when the user change
 
 ## Options Panel
 - Processing Options
@@ -61,8 +62,20 @@ This project is a React-based web application that allows users to process and p
 
 ## Songs
 
-- Currently, no new songs have been added
-- Default song used: stranger_tune from ../tunes.js
+1. stranger_tune
+	- Located in: ../tunes.js
+	- Based on rhythmic, arpeggiated electronic structures
+	- Used as the primary demo track for the application and was already given
+
+2. Clockwork runner
+	- Fully original composition created for this project
+	- Features a mechanical arpeggiator pattern, tight glitch-inspired drums, and dynamic stereo movement
+	- Technically designed using polyrhythmic note cycles, filtered saw synthesis, jittered hi-hats, and probability-based glitch effects
+
+3. Crystal garden
+	- Fully original experimental track
+	- Built around soft bell harmonics, wide reverb spaces, and moving noise-based percussion
+	- Uses slow envelopes, band-passed noise textures, and evolving stereo panning to create a relaxing, spacious soundscape
 
 ### `npm start`
 

@@ -93,6 +93,48 @@ stack(
   .speed(0.5)
   .rarely(jux(rev)),
 )
+
+// new music
+
+// Clockwise runner
+runner_arp:
+note("<c4 e4 g4 b3>*2 <d4 f4 a4>*2")
+.sound("saw")
+.speed(1.2)
+.lpf(900)
+.pan(sine.range(-0.3, 0.3))
+.adsr("0.01:0.12:0.3:0.05")
+
+runner_drums:
+stack(
+  s("bd*2 ~ bd ~").gain(1.4),
+  s("cp(7,16)").gain(0.9).lpf(5000),
+  s("~ hh ~ hh:2").speed("[1 0.5 1.5]/8").gain(0.3),
+  s("glitch*4?0.2").speed(2).gain(0.2)
+)
+
+runner_fx:
+note("c5(3,8)").sound("ping").room(sine.range(0.1,0.6)).gain(0.3)
+
+// Crystal garden
+crystal_bells:
+note("[c5 g4 eb5 bb4]*2 [d5 f4 a4]*2")
+.sound("bell")
+.adsr("0.01:0.5:0.6:0.3")
+.room(0.8)
+.gain(0.7)
+.speed(0.5)
+
+crystal_noise:
+s("noise*8")
+.bandf(sine.range(400,2000))
+.room(0.7)
+.gain(0.15)
+.pan(saw.range(-1,1))
+
+crystal_kick:
+s("bd(5,8)").gain(0.7).lpf(300)
+
 //Remixed and reproduced from Algorave Dave's code found here: https://www.youtube.com/watch?v=ZCcpWzhekEY
 // all(x => x.gain(mouseX.range(0,1)))
 // all(x => x.log())
