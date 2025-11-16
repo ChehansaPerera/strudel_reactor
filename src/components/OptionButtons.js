@@ -82,7 +82,7 @@ function OptionButtons({ option, setOption, instrument, setInstrument, effects, 
                             max="3000"
                             value={effects.filterSweep}
                             onChange={(e) => setEffects((prev) => ({ ...prev, filterSweep: e.target.value }))}
-                            className="form-range"
+                            className="form-range effect-slider"
                         />
                     </div>
 
@@ -97,7 +97,7 @@ function OptionButtons({ option, setOption, instrument, setInstrument, effects, 
                             step="0.01"
                             value={effects.reverbDepth}
                             onChange={(e) => setEffects((prev) => ({ ...prev, reverbDepth: e.target.value }))}
-                            className="form-range"
+                            className="form-range effect-slider"
                         />
                     </div>
 

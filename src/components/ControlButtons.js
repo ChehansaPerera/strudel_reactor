@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { setGlobalVolume, setPlaybackSpeed } from "./StrudelSetup";
+import { setGlobalVolume, setPlaybackSpeed, ProcAndPlay} from "./StrudelSetup";
 
 /*Control panel component for managing Strudel player settings and actions*/
-function ControlButtons({ onPlay, onStop, onProcess, onProcessAndPlay, instrument, option, setInstrument, setOption, setProcText }) {
+function ControlButtons({ onPlay, onStop, onProcess, onProcessAndPlay, instrument, option, setInstrument, setOption, setProcText}) {
     const [volume, setVolume] = useState(0.8);
     const [speed, setSpeed] = useState(1.0);
 
@@ -23,6 +23,7 @@ function ControlButtons({ onPlay, onStop, onProcess, onProcessAndPlay, instrumen
         setSpeed(newSpeed);
         // Update the playback speed
         setPlaybackSpeed(newSpeed, setProcText);
+        ProcAndPlay(instrument);
 
     };
 

@@ -24,6 +24,7 @@ function StrudelDemo() {
     // Stores interval reference for graph animation
     const graphIntervalRef = useRef(null);
 
+
     // Animates graph while music is playing
     const startGraphAnimation = () => {
         // Clear any existing animation interval
@@ -96,21 +97,7 @@ function StrudelDemo() {
         setGraphData(formattedData);
     };
 
-
-    //const handleProcess = () => {
-    //    Proc();
-    //    const text = document.getElementById("proc")?.value || "";
-    //    const counts = {};
-    //    for (let char of text) {
-    //        if (char.trim() !== "") counts[char] = (counts[char] || 0) + 1;
-    //    }
-    //    const formattedData = Object.entries(counts).map(([note, count]) => ({
-    //        note,
-    //        count,
-    //    }));
-    //    setGraphData(formattedData);
-    //};
-
+    // Runs the code without playing audio, marks playback as stopped, and updates the graph to a static state
     const handleProcess = () => {
         Proc();
         setIsPlaying(false); 
@@ -118,9 +105,7 @@ function StrudelDemo() {
         generateStaticGraph();    
     };
 
-
-    //const handleProcAndPlay = () => ProcAndPlay(instrument);
-
+    // Starts playback: applies current speed, runs ProcAndPlay, updates UI state, and starts graph animation
     const handleProcAndPlay = () => {
         setPlaybackSpeed(window.currentPlaybackSpeed || 1.0, setProcText); 
         ProcAndPlay(instrument, effects);
@@ -128,12 +113,14 @@ function StrudelDemo() {
         startGraphAnimation();    
     };
 
+    // Stops playback: stops audio, updates UI state, clears graph animation, and shows the static graph
     const handleStopMusic = () => {
         handleStop();
         setIsPlaying(false);
         if (graphIntervalRef.current) clearInterval(graphIntervalRef.current);
         generateStaticGraph();
     };
+
 
     // Run Strudel setup only one time when the page loads
     useEffect(() => {
@@ -142,7 +129,18 @@ function StrudelDemo() {
             setupStrudel(stranger_tune, setProcText);
         }
     }, []);
-   
+
+
+    useEffect(() => {
+        if (isPlaying) {
+            // Clear the previous animation loop if it exists
+            if (graphIntervalRef.current) clearInterval(graphIntervalRef.current);
+            // Start a fresh graph animation using the updated BPM
+            startGraphAnimation();
+        }
+    }, [procText]);
+
+
     return (
         <div className="min-h-screen text-gray-200" style={{ backgroundColor: '#1c1c1f' }}>
             <header className="bg-indigo-600 py-4 shadow">
