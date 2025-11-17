@@ -85,6 +85,9 @@ Clockwork Runner was designed to feel fast and mechanical. I built the arpeggio 
 
 Crystal Garden was created to be soft and ambient. I chose bell-like notes, added long envelopes, and used a lot of reverb to make the sound spacious. Instead of strong drums, I used gentle noise patterns with band-pass filters and slow stereo movement to keep it calm and relaxing.
 
+### Demo Video
+[Link for the demonstration video](https://www.dropbox.com/scl/fi/7neiyc5ewwixdej496nkb/Demo.mp4?rlkey=y0l9pyty0rlixkwst2gmgof0r&st=xgshzl3u&dl=0)
+
 ### `npm start`
 
 Runs the app in the development mode.\
